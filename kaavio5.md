@@ -2,22 +2,22 @@
     participant browser
     participant server
     
-    browser-->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
     activate server
-    server-->>browser: HTML document
+    server->>browser: HTML document
     deactivate server
     
-    browser-->>server GET https://studies.cs.helsinki.fi/exampleapp/main.css
+    browser->>server GET https://studies.cs.helsinki.fi/exampleapp/main.css
     activate server
-    server-->>browser: CSS file
+    server->>browser: CSS file
     deactivate server
     
-    browser-->>server GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+    browser->>server GET https://studies.cs.helsinki.fi/exampleapp/spa.js
     activate server
-    server-->>browser: Javascript file
+    server->>browser: Javascript file
     deactivate server
     
-    browser-->>server GET https://studies.cs.helsinki.fi/exampleapp/data.json
+    browser->>server GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
-    server-->>browser: [{content: "Gojo", date: "2023-12-22T10:35:17.776Z"}, ...]
+    server->>browser: [{content: "Gojo", date: "2023-12-22T10:35:17.776Z"}, ...]
     deactivate server
